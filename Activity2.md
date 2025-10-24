@@ -20,7 +20,7 @@
  
 FLOW CHART
 
-![Build success](flowact.png)
+![Build success](Activity2flow.png)
 
 Figure 1: Flow chart of Activity 1
 
@@ -30,11 +30,15 @@ The form opens and then the user chooses what to do: view the list, add a vehicl
 
 
 UML Class Diagram
-![Build success](umlact.png)
+
+![Build success](Activity2uml.png)
+
 Figure 2: UML Class Diagram
 
 This diagram is the “map” of my Vehicle Store. At the center is a basic Vehicle that has the usual details like id, make, model, year, price, and wheels. The car, motorcycle, and pickup are just versions of that same vehicle with a couple extra details added on. The screen you see, called FrmVehicleStore, does not touch the data directly. Instead it talks to a helper class called StoreLogic, and StoreLogic talks to the data class. The data piece has a simple list of vehicles and handles getting them, adding, finding by id, and removing. The arrows just show who depends on who, so the screen uses the logic, the logic uses the data, and the models sit underneath everything.
+
 Part 1
+
 Figure 3: Project Folder Setup
 
 ![Build success](structurebefore.png)
@@ -50,6 +54,7 @@ Here’s the CellModel class I created for each square on the chessboard. It sto
 
 
 Figure 5 InitialBoard Method
+
 ![Build success](initboard.png)
 
 This shows the app with the inventory on top and the shopping cart on the bottom. I used the Add button to drop a couple of cars into the list, then selected them and hit Add to Cart so they appear in the lower grid. You can also see the running total updating down by the buttons.
@@ -63,9 +68,10 @@ This class handles all the move logic for the game. It clears old legal moves, c
 Screen Shots
 
 Part 2 
+
 ![Build success](boardbefore.png)
 
-Figure 5: First Board shown
+Figure 7: First Board shown
 
 This is the first run of the GUI showing the 8x8 grid before any moves are made. Each square is clickable and tied to the logic layer that handles move checking.
 
@@ -75,7 +81,7 @@ This is the first run of the GUI showing the 8x8 grid before any moves are made.
 
 ![Build success](knightbefore.png)
 
-Figure 6: First Knight Function
+Figure 8: First Knight Function
 
 Here I picked the Knight and placed it in the middle of the board. The stars mark all legal moves it can make, showing the logic works just like the console version.
 
@@ -91,7 +97,7 @@ Here I picked the Knight and placed it in the middle of the board. The stars mar
 
 ![Build success](console.png)
 
-Figure 7 : Screenshots of Console 
+Figure 9 : Screenshots of Console 
 
 This is the console version of the chessboard app right after launching. It shows an empty grid and prompts the user to enter which piece they want to test.
 
@@ -103,7 +109,7 @@ This is the console version of the chessboard app right after launching. It show
 
 ![Build success](console.png)
 
-Figure 8 : Screenshot of Console Knight Function
+Figure 10 : Screenshot of Console Knight Function
 
 After picking the Knight and a location, the console prints all legal moves using asterisks. It matches the GUI results, which shows both versions share the same back-end logic.
 
@@ -117,9 +123,9 @@ After picking the Knight and a location, the console prints all legal moves usin
 Part 3 GUI Application
 
 
-![Build success](board.png)
+![Build success](done.png)
 
-Figure 9 Screenshot of Final Board
+Figure 11 Screenshot of Final Board
 
 Here’s the GUI again, this time showing the dropdown for piece selection. I can choose any piece and click a square to see its valid moves right on the grid.
 
@@ -129,7 +135,8 @@ Here’s the GUI again, this time showing the dropdown for piece selection. I ca
 
 
 ![Build success](knight.png)
-Figure 10 Screenshot of Knight Function
+
+Figure 12 Screenshot of Knight Function
 
 I selected Knight and clicked the center square. The stars show every L-shaped move it can make. This confirms the move rules are working.
 
@@ -145,17 +152,20 @@ I selected Knight and clicked the center square. The stars show every L-shaped m
 
 
  ![Build success](queen.png)
-Figure 11 Screenshot of Queen Function
+ 
+Figure 13 Screenshot of Queen Function
 
 I switched to Queen and placed it in the middle. The stars light up rows, columns, and diagonals. This proves the combined rook and bishop logic is correct.
 
- ![Build success](structure.png)
-Figure 12 Screenshot of Sctructure
+ ![Build success](setup.png)
+ 
+Figure 14 Screenshot of Sctructure
 
 This is how I organized the ChessBoardClassLibrary. Models hold the data and the BusinessLogicLayer handles the rules. Keeping it split up makes changes easier.
 
  ![Build success](theme.png)
-Figure 13 Screenshot of Theme Change
+ 
+Figure 15 Screenshot of Theme Change
 
 I chose Rook and turned on the Cool theme. The stars show all straight-line moves from the selected square. The styling helps the board read clean while I test moves.
 
