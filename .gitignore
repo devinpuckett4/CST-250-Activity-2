@@ -1,0 +1,12 @@
+﻿# build outputs
+bin/
+obj/
+.vs/
+# user-specific
+*.user
+*.suo
+*.log
+*.tmp
+# OS junk
+Thumbs.db
+.DS_Store
